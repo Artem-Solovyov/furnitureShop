@@ -1,0 +1,214 @@
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &__wrapper {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        z-index: 50;
+    }
+    
+    &__container {
+        max-width: var(--maxWidthContainer);
+        margin: 0 auto;
+    }
+    
+    &__body {
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        min-height: 125px;
+    }
+    
+    &__main {
+        display: flex;
+        align-items: center;
+        flex: 0 0 494/1270 * 100%;
+    }
+    
+    &__logo {
+        color: #000000;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29 / 24 * 100%;
+    }
+    
+    &__menu {}
+    
+    &__search {}
+
+    &__actions {}
+
+}
+
+._container {}
+
+.menu {
+    flex: 0 1 420px;
+    &__body {}
+    
+    &__list {
+        @media (min-width: 767px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 3px;
+        padding: 5px 0;
+        position: relative;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .menu__sub-list {
+                    transform: translate(0px, 0px);
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+                .menu___arrow {
+                    transform: rotate(-180deg);
+                }
+                .menu__link {
+                    color: var(--orangeColor);
+                }
+            }
+        }
+        @media (min-width: 767px) {
+            
+        }
+    }
+    
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: inherit;
+        transition: color 0.3s ease 0s;
+    }
+    
+    &___arrow {
+        margin: 0 0 0 8px;
+        transition: all 0.3s  ease 0s;
+    }
+
+    &__sub-list {
+        position: relative;
+        background-color: var(--orangeColor);
+        padding: 15px;
+        flex: 1 1 100%;
+        
+        @media (min-width: 767px) {
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+            transform: translate(0px, 10px);
+            visibility: hidden;
+            min-width: 200px ;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            pointer-events: none;
+        }
+    }
+    
+    &__sub-item {
+        &:not(:last-child) {
+            margin: 0 0 5px 0;
+        }
+    }
+    
+    &__sub-link {
+        color: #fff;
+        line-height: 120%;
+    }
+}
+
+
+.icon-arrow-down {}
+
+
+.search-form {}
+
+.search-form__icon {}
+
+.icon-search {}
+
+.search-form__item {}
+
+.search-form__btn {}
+
+.search-form__inpute {}
+
+.actions-header {}
+
+.actions-header__item {}
+
+.actions-header__item_favorites {}
+
+.icon-favorite {}
+
+.card-header {}
+
+.cart-header__icon {}
+
+.icon-cart {}
+
+.cart-header__body {}
+
+.cart-header__list {}
+
+.cart-list {}
+
+.actions-header__item_user {}
+
+._ibj {}
+
+.icon-menu {}
+
+.icon-search::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    // position: absolute;
+    background: url('./../../iconsfont/search.svg');
+    background-repeat: no-repeat;
+}
+
+.icon-arrow-down {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 9px;
+    // position: absolute;
+    background: url('./../../iconsfont/arrow-down.svg');
+    background-repeat: no-repeat;
+}
+.icon-favorite {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 21px;
+    // position: absolute;
+    background: url('./../../iconsfont/favorite.svg');
+    background-repeat: no-repeat;
+}
+.icon-cart {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    // position: absolute;
+    background: url('./../../iconsfont/cart.svg');
+    background-repeat: no-repeat;
+}
