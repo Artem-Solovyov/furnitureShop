@@ -1,0 +1,377 @@
+.page {
+    flex: 1 1 auto;
+    &__main-slider {
+
+    }
+    &__advantages {}
+}
+
+//=================MAIN=SLIDER===========================================================
+.main-slider {
+    background: #fcf8f3;
+    &__container {
+        position: relative;
+        @media (min-width: 992px) {
+            &::before {
+                content: '';
+                background: #f9f1e7;
+                position: absolute;
+                top: 0;
+                right: 376px;
+                height: 100%;
+                width: 100vw;
+            }
+        }
+    }
+    
+    &__body {
+        overflow: visible;
+        padding: 140px 15px 0 15px;
+        position: relative;
+        
+        z-index: 2;
+        @media (max-width: 992px) {
+            padding: 80px 15px 0 15px;
+        }
+        @media (max-width: 768px) {
+            padding: 50px 15px 0 15px ;
+        }
+        @media (min-width: 992px) {
+            display: flex;
+        }
+        
+    }
+    
+    &__conent {
+        align-self: flex-start;
+        flex: 0 0 494/1240 * 100%;
+        @include adaptive-value('margin-bottom', 80, 15, 1);
+        @media (max-width: 992px) {
+            margin: 0 -15px;
+        }
+    }
+    
+    &__slider {
+        flex: 1 1 auto;
+        min-width: 0;
+        align-self: flex-end;
+        @media (min-width: 992px) {
+            padding: 0 0 0 32px;
+        }
+    }
+    
+    &__controls {}
+}
+
+.contant-main {
+    position: relative;
+    z-index: 5;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(255, 255, 255, 0.72);
+    @include adaptive-value('padding-top', 60, 15, 1);
+    @include adaptive-value('padding-bottom', 60, 15, 1);
+    background: rgba(255, 255, 255, 0.9);
+    @media (min-width: 992px) {
+        @include adaptive-value('padding', 60, 1, 1);
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))){
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blure(31px)
+        }
+    }
+    &__title {
+        font-weight: 700;
+        @include adaptive-value('font-size', 52, 22, 1);
+        line-height: 120%;
+        &:not(:last-child){
+            margin: 0 0 16px/52px * 1em 0;
+        }
+    }
+
+    &__text {
+        @include adaptive-value('font-size', 20, 16, 1);
+        color: var(--greyColor);
+        font-weight: 500;
+        line-height: 150%;  
+        &:not(:last-child) {
+                margin: 0 0 48px/20px * 1em 0;
+            }
+    }
+
+    &__button {
+        font-weight: 600;
+        background-color: var(--orangeColor);
+        @include adaptive-value('min-hight', 78, 45,1);
+        @include adaptive-value('font-size', 20, 16,1);
+        color: #fff;
+        width: 100%;
+        @media (any-hover: hover) {
+            &:hover{
+                background: #966749;
+            }
+        }
+    }
+}
+
+.swiper {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.slider-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: 992px) {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+    &__controls{
+        align-self: stretch;
+        margin: 0 0 20px 0;
+        @media (max-width: 992px) {
+            margin: 10px 0 20px 0;
+        }
+    }
+    &__slide {
+        position: relative;
+    }
+    
+    &__image {
+        padding: 0 0 59.1% 0;
+    }
+    
+    &__body {
+        overflow: visible;
+        
+        
+        @media (min-width: 992px) {
+            @include adaptive-value('width', 934, 290, 1)
+            
+        }
+        @media (max-width: 992px) {
+            margin: 0 -15px;
+        }
+    }
+    
+    &__title {
+        @include adaptive-value('font-size', 28, 22, 1);
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 4px;
+
+    }
+    
+    &__text {
+        line-height: 150%;
+        color: var(--greyColor);
+        margin-bottom: 8px;
+    }
+    
+    &__price {
+        display: flex;
+        flex-direction: row-reverse;
+        line-height: 150%;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        @include adaptive-value('font-size', 20, 16, 1);
+        &::before {
+            margin: 0 0 0 10px;
+            font-size: 12px;
+        }
+    }
+
+    &__contant {
+        min-width: 295px;
+        max-height: 300px;
+        overflow: auto;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        @include adaptive-value('padding', 24, 15, 1);
+        background: rgba(255, 255, 255, 0.9);
+        @media (min-width: 768px) {
+            position: absolute;
+            min-width: 350px;
+            @include adaptive-value('right', 40, 0, 1);
+            @include adaptive-value('bottom', 40, 0, 1);
+        }
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blure(31px)
+        }
+}
+}
+
+.controls-slider-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__dotts {
+        flex: 1 1 auto;
+
+        @media (min-width: 992px) {
+            padding: 0 20px 0 0;
+        }
+        @media (max-width: 992px) {
+            justify-content: center;
+        }
+    }
+
+    &__arrows {
+        
+    }
+    
+}
+
+
+// icon 
+
+.slider-arrows {
+    display: grid;
+    grid-template-columns: repeat(2, 48px);
+    column-gap: 8px;
+    @media (max-width: 992px) {
+            display: none;
+        } 
+}
+
+.slider-arrow {
+    border-radius: 50%;
+    height: 48px;
+    background-color: rgba(232, 159, 113, 0.3);
+    color: var(--orangeColor);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &_prev {
+        transform: rotate(90deg);
+    }
+    &_next {
+        transform: rotate(-90deg);
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+            background-color: rgba(232, 159, 113, 1);
+        }
+    }
+
+    &_white {
+        box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+        background-color: #fff;
+        @media (any-hover: hover) {
+                &:hover {
+                    color: #fff;
+                    background-color:var(--orangeColor);
+                }
+            }
+    }
+}
+
+//pagination 
+
+.swiper-pagination-bullets {
+    display: flex ;
+    flex-wrap: wrap;
+    
+}
+
+.swiper-pagination-bullet {
+    cursor: pointer;
+    flex: 0 0 27px;
+    height: 27px ;
+    position: relative;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    opacity: 1;
+    background: none;
+    &:not(:last-child){
+        margin-right: 12px;
+    }
+    &::after {
+        content: '';
+        width: 11px;
+        height: 11px ;
+        background-color: #d8d8d8;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid var(--orangeColor);
+        transition: transform 0.3s ease;
+        transform: scale(0);
+
+    }
+
+}
+.swiper-pagination-bullet-active {
+    background: none;
+    &::after {
+        background: var(--orangeColor);
+    }
+    &::before {
+        transform: scale(1);
+    }
+}
+
+//=================ADVANTAGES===========================================================
+
+.advantages {
+    @include adaptive-value('padding-top', 88, 30,1);
+    @include adaptive-value('padding-bottom', 88, 30,1);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 15px ;
+        padding-right: 15px ;
+    }
+    
+    &__item {
+        display: grid;
+        padding: 15px 0;
+        grid-template: auto auto / 85px 1fr ;
+        @media (max-width: 992px) {
+            min-width: 280px;
+        }
+        @media (max-width: 768px) {
+            grid-template: auto auto / auto 1fr;
+        }
+    }
+    
+    &__icon {
+        text-align: center;
+        align-self: center;
+        grid-row: span 2;
+        @media (max-width: 768px){
+            padding: 0 15px 0 0;
+        }
+    }
+    
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        margin: 0 0 2px/18px * 1em 0;
+    }
+    
+    &__text {
+        line-height: 150%;
+        color: var(--greyColor);
+    }
+}
+
+
+//=================ADVANTAGES===========================================================

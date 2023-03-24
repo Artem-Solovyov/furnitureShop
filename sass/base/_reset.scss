@@ -100,6 +100,7 @@ input[type="submit"] {
     background-color: transparent;
     background: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 input:focus,

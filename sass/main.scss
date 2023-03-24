@@ -3,8 +3,12 @@
 @import "./base/base";
 @import "./base/reset";
 @import "./base/vars";
+@import "./base/adaptive-value";
+@import "./base/form";
 
 
 // blocks
 
-@import './blocks/header'
+@import './blocks/header';
+@import './blocks/footer';
+@import './blocks/mainSlider';

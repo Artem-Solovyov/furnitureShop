@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e261953-6c9c-4107-8c32-b069f2ef18dd" name="Changes" comment="" />
+    <list default="true" id="0e261953-6c9c-4107-8c32-b069f2ef18dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/blocks/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/blocks/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +28,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/IT/Front-end/HTML/HTML student/furnitureShop",
+    "last_opened_file_path": "C:/IT/Front-end/ReactStudents/car-catalog",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -34,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679086808958</updated>
       <workItem from="1679086810291" duration="63000" />
+      <workItem from="1679376952436" duration="15000" />
     </task>
     <servers />
   </component>

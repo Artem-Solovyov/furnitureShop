@@ -1,0 +1,213 @@
+// ._container {}
+
+._footer-title {
+    font-size: 24px;
+    line-height: 29 / 24 * 100%;
+    color: #000;
+    font-weight: 700;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.footer {
+    // position: fixed;
+    // left: 0;
+    // bottom: 0;
+    width: 100%;
+
+    &__container {
+        // max-width: var(--maxWidthContainer);
+        // margin: 0 auto;
+    }
+    
+    &__body {
+        display: grid;
+        margin: 0 15px;
+        justify-content: center;
+        border-top: 1px solid #d8d8d8;
+        grid-template-columns: 250px 1fr 290px;
+        padding: 40px 0 60px 0;
+        column-gap: 80px;
+        @media (max-width: 1250px) {
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 290px;
+        }
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+    
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: 1250px) {
+                grid-column: span 2;
+                margin-bottom: 35px;
+            }
+    }
+    
+    &__logo {
+        margin-bottom: 16px;
+        
+    }
+
+    &__text {
+        color: var(--greyColor);
+        line-height: 150%;
+        &:not(:last-child) {
+            margin: 0 0 1em 0;
+        }
+    }
+    
+    &__contacts {}
+    
+    &__menu {
+        @media (max-width: 992px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__subscribe {}
+}
+
+
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__item {
+        
+        display: inline-flex;
+        align-items: center;
+        line-height: 150%;
+        color: var(--greyColor);
+        transition: color 0.3s ease 0s;
+        &::before{
+            margin: 0 8px 0 0;
+        }
+        &:not(:last-child) {
+            margin: 0 0 15px 0;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--orangeColor)
+            }
+        }
+    }
+
+}
+
+.menu-footer {
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    &__column {
+        @media (min-width: 768px) {
+            flex: 0 1 33.333%
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+    
+    &__title {
+        cursor: default;
+        margin:  0 0 16px 0;
+        ._init &{
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            &::before,
+            &::after{
+                content: "";
+                width: 15px;
+                height: 1px;
+                background-color: #000;
+                position: absolute;
+                right: 10px;
+                top: 12px;
+                transition: transform 0.3s ease;
+            }
+            &::after{
+                transform: rotate(-90deg);
+            }
+        }
+        &._active {
+            &::after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__list {
+        li {
+            &:not(:last-child) {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+    
+    &__link {
+        color: var(--darkGreyColor);
+        transition: color 0.3s ease 0s;
+        line-height: 120%;
+        font-weight: 500;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--orangeColor)
+            }
+        }
+    }
+}
+
+
+.subscribe {
+    
+    &__title {
+        margin: 0 0 16px 0;
+    }
+    
+    &__form {
+        display: flex;
+        position: relative;
+    }
+    
+    &__input {
+        width: 100%;
+        padding: 0 12px;
+        background-color: #F4F5F7;
+        color: #828282;
+    }
+    
+    &__button {
+        flex: 0 0 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background-color: var(--orangeColor);
+        color: #fff;
+        margin: 0 0 0 4px;
+        transition: background-color 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #be825c
+            }
+        }
+    }
+}
+
+
+.icon-send {}
+
+.icon-location {}
+
+.icon-phone {}
+
+
+

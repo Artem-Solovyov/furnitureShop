@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    text-transform: none;
+    // text-transform: none;
     line-height: 1;
 
     /* Better Font Rendering =========== */
@@ -64,5 +64,34 @@
 body {
     color: #3A3A3A;
     font-family: 'Montserrat', sans-serif;
-    background: #F9F1E7;
+
+}
+._container {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+}
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+// IBG
+
+._ibg {
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+._ibg img {
+
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
 }

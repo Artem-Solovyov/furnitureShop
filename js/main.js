@@ -1,3 +1,5 @@
+// funcyion is mobile
+
 const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -25,6 +27,22 @@ const isMobile = {
   },
 };
 
+// ibg image
+
+function ibg() {
+  let ibg = document.querySelectorAll("._ibg");
+  for (var i = 0; i < ibg.length; i++) {
+    if (ibg[i].querySelector("img")) {
+      ibg[i].style.backgroundImage =
+        "url(" + ibg[i].querySelector("img").getAttribute("src") + ")";
+    }
+  }
+}
+
+ibg();
+
+// function click ...
+
 window.onload = function () {
   document.addEventListener("click", documentActions);
 
@@ -45,11 +63,11 @@ window.onload = function () {
         }
       }
     }
-    // if (window.innerWidth < 768 && isMobile.any()) {
-    //   if (targetElement.classList.contains("menu___arrow")) {
-    //     targetElement.closest(".menu__item").classList.toggle("_active");
-    //   }
-    // }
+    if (window.innerWidth < 768 && isMobile.any()) {
+      if (targetElement.classList.contains("icon-menu")) {
+        targetElement.closest(".icon-menu").classList.toggle("_active");
+      }
+    }
     if (targetElement.classList.contains("search-form__icon")) {
       document.querySelector(".search-form").classList.toggle("_active");
     } else if (
@@ -59,6 +77,31 @@ window.onload = function () {
       document.querySelector(".search-form").classList.remove("_active");
     }
   }
+};
+
+// Получаем класс после скролла нескольких пикселей вниз и убираем класс когда возвращаемся наззад
+
+const headerElement = document.querySelector(".header");
+
+const callback = function (entries, observer) {
+  if (entries[0].isIntersecting) {
+    headerElement.classList.remove("_scroll");
+  } else {
+    headerElement.classList.add("_scroll");
+  }
+};
+
+const headerObserve = new IntersectionObserver(callback);
+
+headerObserve.observe(headerElement);
+
+// MENU-ICON
+const menuBody = document.querySelector(".menu__body");
+const menuIcon = document.querySelector(".icon-menu");
+
+menuIcon.onclick = function () {
+  menuBody.classList.toggle("_active");
+  menuIcon.classList.toggle("_active");
 };
 
 // DATA-SPOLLERS
@@ -258,4 +301,31 @@ if (spollersArray.length > 0) {
       _slideUp(spollerActiveTitle.nextElementSibling, 500);
     }
   }
+}
+
+// SWIPER
+
+if (document.querySelector(".slider-main__body")) {
+  new Swiper(".slider-main__body", {
+    observer: true,
+    observeParents: true,
+    initialSlide: 1,
+    slidesPerView: 1,
+    spaceBetween: 32,
+    watchOverflow: true,
+    speed: 800,
+    loop: true,
+    // loopedSlides: 5,
+    loopAdditionalSlides: 5,
+    preloadImages: false,
+    parallax: true,
+    pagination: {
+      el: ".controls-slider-main__dotts",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".slider-main .slider-arrow_next",
+      prevEl: ".slider-main .slider-arrow_prev",
+    },
+  });
 }
