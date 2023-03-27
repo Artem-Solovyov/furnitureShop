@@ -20,7 +20,7 @@
 			"labels": [
 				{
 					"type": "sale",
-					"value": "-50%"
+					"value": "-10%"
 				},
 				{
 					"type": "new",
@@ -56,6 +56,10 @@
 			"title": "Potty",
 			"text": "Minimalist flower pot",
 			"labels": [
+				{
+					"type": "sale",
+					"value": "-10%"
+				},
 				{
 					"type": "new",
 					"value": "New"

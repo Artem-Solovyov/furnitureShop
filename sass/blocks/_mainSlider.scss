@@ -4,6 +4,13 @@
 
     }
     &__advantages {}
+
+    &__products {}
+
+    &__rooms {}
+    
+    &-tips {}
+        &__furniture {}
 }
 
 //=================MAIN=SLIDER===========================================================
@@ -225,7 +232,6 @@
     
 }
 
-
 // icon 
 
 .slider-arrows {
@@ -373,5 +379,633 @@
     }
 }
 
+//=================MAiN=BLOCK===========================================================
 
-//=================ADVANTAGES===========================================================
+.products {
+    @include adaptive-value('padding-bottom', 44, 30, 1);
+    &__container {}
+    
+    &__title {
+        margin: 0 0 32px/40px * 1em 0;
+    }
+    
+    &__items {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fit,minmax(285px, 1fr))
+    }
+    
+    &__item {}
+    &__footer {
+        padding: 32px 0 0 0; 
+        text-align: center
+    }
+    &__more {
+        border: 1px solid var(--orangeColor);
+        min-width: 245px;
+        &._hold{
+            opacity: 0.2;
+            cursor: default;
+        }
+    }
+}
+
+._title {
+    @include adaptive-value('font-size', 40, 24, 1);
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+}
+
+.item-product {
+    background: #f4f5f7;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media (any-hover: hover){
+        &:hover {
+            .item-product__actions {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__labels {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        @include adaptive-value('right', 24, 10,1);
+        @include adaptive-value('top', 24, 10,1);
+    }
+    
+    &__lebel {
+        flex: 0 0 48px;
+        width: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+        &:not(:last-child){
+            margin: 0 0 10px 0; 
+        }
+        &_sale  {
+            background: #e97171;
+        }
+        &_new  {
+            background: #2ec1ac;
+        }
+
+    }
+    
+    
+    &__image {
+        padding: 0 0 301px/285px * 100% 0;
+    }
+    
+    &__body {
+        flex: 1 1 auto;
+        padding: 16px 16px 30px 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__contant {
+        flex: 1 1 auto;
+    }
+    
+    &__title {
+        @include adaptive-value('font-size', 24, 20, 1);
+        font-weight: 600;
+        line-height: 120%;
+        margin: 0 0 8px/24px * 1em 0;
+    }
+    
+    &__text {
+        color: var(--greyColor);
+        line-height: 150%;
+        margin: 0 0 8px/24px * 1em 0;
+    }
+    
+    &__prices {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 150%;
+    }
+    
+    &__price {
+        @include adaptive-value('font-size', 20, 16, 1);
+        font-weight: 600;
+        &_old {
+            @include adaptive-value('font-size', 16, 14, 1);
+            font-weight: normal;
+            margin: 0 0 0 16px;
+            color: #b0b0b0;
+            text-decoration: line-through;
+        }
+    }
+    
+
+    &__actions {
+        @media (any-hover: none) {
+            padding: 15px 0 0 0;
+        }
+
+        @media (any-hover: hover) {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            background-color: rgba(58, 58, 58, 0.74);
+            z-index: 3;
+        
+        }
+    }
+}
+
+.actions-product {
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    &__button {
+        flex: 1 1 100%;
+        &:not(:last-child){
+            margin: 0 0 24px 0;
+        }
+        &._hold {
+            opacity: 0.2;
+            cursor: default;
+        }
+    }
+    
+    &__link {
+        display: flex;
+        align-items: center;
+        color: inherit;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        &::before {
+            margin: 0 10px 0 0;
+            font-size: 16px;
+        }
+        @media (any-hover: hover) {
+            color: #fff;
+            &:hover{
+                color: var(--orangeColor)
+            }
+        }
+
+    }
+}
+
+//================ROOMS====================================================================
+
+
+.rooms {
+    // margin-left: 15px;
+    // margin-right: 15px;
+    background: #fcf8f3;
+    @include adaptive-value('padding-top', 44, 30, 1);
+    @include adaptive-value('padding-bottom', 44, 30, 1);
+
+    &__container {
+        padding-left: 15px;
+        padding-right: 15px;
+        @media (min-width: 992px){
+            display: flex;
+        }
+    }
+    
+    &__body {
+        flex: 0 0 465 / 1240 * 100%;
+        position: relative;
+        z-index: 5;
+        align-self: center;
+        @media (min-width: 992px) {
+                @include adaptive-value('padding-right', 80, 30, 1);
+            }
+        @media (max-width: 992px){
+            margin: 0 0 30px 0;
+        }
+    }
+    
+    &__title {
+        &:not(:last-child) {
+            margin: 0 0 8px/40px *1em 0;
+        }
+        text-align: left;
+    }
+    
+    &__text {
+        line-height: 150%;
+        font-weight: 500;
+        &:not(:last-child){
+            margin: 0 0 24px 0;
+        }
+    }
+    
+    &__button {
+        background: var(--orangeColor);
+        color: #fff;
+        min-width: 180px;
+        @media (any-hover: hover){
+            &:hover {
+                background: #8d6146;
+            }
+        }
+    }
+    
+    &__slider {
+        flex: 1 1 auto;
+        min-width: 0;
+        align-self: flex-start;
+        @media (max-width: 480px) {
+                margin: 0 -15px;
+            }
+    }
+
+}
+
+.slider-rooms {
+    position: relative;
+    &__swiper {
+        width: 372px;
+        overflow: visible;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100vw;
+            left: 0;
+            background: #fcf8f3;
+            z-index: 2;
+            transform: translate(-100%,0);
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+    
+    &__wrapper {}
+    
+    &__slide {
+        width: 372px;
+        position: relative;
+        overflow: hidden;
+        @include adaptive-value('min-height', 585, 400, 1);
+        &.swiper-slide-active {
+            .slider-rooms__image{
+                @include adaptive-value('min-height', 585, 400, 1)
+            }
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
+    &__image{
+        transition: min-height 0.8s ease;
+        @include adaptive-value('min-height', 585, 400, 1);
+    
+        @media (min-width: 768px){
+            @include adaptive-value('min-height', 500, 400, 1);
+        }
+    }
+    
+    &__content {
+        position: absolute;
+        color: inherit;
+        max-width: 240px;
+        @include adaptive-value('left', 24, 15, 1);
+        @include adaptive-value('bottom', 24, 15, 1);
+        @include adaptive-value('padding', 32, 15, 1);
+        background: rgba(255, 255, 255, 0.72);
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blure(31px)
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(100%,0);
+            width: 48px;
+            height: 48px;
+            background-color: var(--orangeColor);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+    
+    &__label {
+        
+    }
+    
+    &__title {
+        font-weight: 600;
+        @include adaptive-value('font-size', 28, 24, 1)
+    }
+    
+    &__arrows {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: calc(100% - 48px);
+        left: 24px;
+        z-index: 5;
+        justify-content: space-between;
+
+        @media (min-width: 1300px){
+            width: calc(100% + 48px);
+            left: -24px;
+        }
+        @media (max-width: 992px){
+            display: grid;
+        }
+    }
+    
+    &__dotts {
+    
+        @media (min-width: 768px){
+            position: absolute;
+            bottom: 10px !important; 
+            width: 100%;
+            left: 396px !important;
+            z-index: 5;
+            
+        }
+        @media (max-width: 768px){
+            justify-content: center;
+            padding: 15px 0 0 0;
+        }
+    }
+}
+
+.label-slider {
+    display: grid;
+    gap: 8px;
+    align-items: center;
+    justify-content: start;
+    color: var(--darkGreyColor);
+    grid-template-columns: auto 27px auto;
+    &:not(:last-child){
+        margin: 0 0 8px 0
+    }
+
+    &__number {}
+    
+    &__line {
+        height: 1px;
+        background-color:var(--darkGreyColor);
+    }
+    
+    &__text {}
+}
+
+.icon-arrow-link {}
+
+.slider-arrows {}
+
+.slider-arrow {
+    pointer-events: auto;
+}
+
+//======================TIPS=============================================================
+
+.tips {
+    @include adaptive-value('padding-top', 44, 30, 1);
+    @include adaptive-value('padding-bottom', 44, 30, 1);
+    
+    &__container {
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    
+    &__title {
+    }
+    
+    &__slider {}
+}
+
+.slider-tips {
+    position: relative;
+    &__body {
+        min-width: 0;
+        @include adaptive-value ('marin-left', -32, -15, 1);
+        @include adaptive-value ('marin-riht', -32, -15, 1);
+        @include adaptive-value ('padding', 32, 15, 1);
+    }
+    
+    &__wrapper {
+    }
+    
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 0.3s ease;
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0 0 32px rgba(97,97,97, 02);
+            }
+        }
+    }
+    
+    &__image {
+        padding: 0 0 251/391 *100% 0px
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        flex: 1 1 auto;
+        align-items: flex-start;
+    }
+    
+    &__title {
+        flex: 1 1 auto;
+        color: inherit;
+        font-weight: 600;
+        line-height: 120%;
+        @include adaptive-value('font-size', 24, 18, 1);
+        transition: color 0.3s ease;
+        &:not(:last-child){
+            margin: 0 0 8px/24px * 1em 0;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: var(--orangeColor)
+            }
+        }
+    }
+    
+    &__text {
+        color: var(--greyColor);
+        font-size: 14px;
+        line-height: 150%;
+    }
+    
+    &__dotts {
+        @include adaptive-value('padding-top', 8, 0, 1);
+        justify-content: center;
+    }
+    
+    &-arrows {
+        display: none;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: calc(100%);
+        // left: -24px;
+        z-index: 5;
+        justify-content: space-between;
+    
+        @media (min-width: 1300px) {
+            width: calc(100%);
+            // left: -24px;
+        }
+    
+        @media (min-width: 450px) {
+            display: grid;
+        }
+        // @media (max-width: 992px) {
+        //     display: grid;
+        // }
+    }
+}
+
+//===================FUrNITURE============================================================
+
+
+
+.furniture {
+    @include adaptive-value('padding-bottom', 85, 40, 1);
+
+    &__container {}
+    
+    &__label {
+        text-align: center;
+        color: var(--darkGreyColor);
+        line-height: 150%;
+        @include adaptive-value('font-size', 20, 16, 1);
+        &:no(:last-child){
+            margin: 0 0 8px/20px * 1em 0;
+        }
+    }
+    
+    &__title {
+        margin: 0 0 32px/40px * 1em 0;
+    }
+    
+    &__body {
+        position: relative;
+        @media (any-hover: none){
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+    
+    &__items {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 16px;
+        @media (any-hover: hover){
+            &:hover{
+                justify-content: center;
+            }
+        }
+    }
+    
+    &__column {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0px -8px;
+        &:first-child{
+            justify-content: flex-end;
+        }
+    }
+    
+    &__row {
+        display: inline-grid;
+        padding: 0 8px;
+        gap: 16px;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        &:not(:last-child){
+            margin: 0 0 16px 0;
+        }
+    }
+}
+
+
+.row-furniture {
+
+    &_left-top {
+        justify-content: end;
+        align-items: end;
+    }
+    
+    &__item {
+        @media (any-hover:hover){
+            img {
+                transition: all 0.6s ease;
+                filter: grayscale(1);
+            }
+            &:hover{
+                img {
+                    filter: grayscale(0);
+                }
+        }
+        }
+    }
+    
+    &_left-bottom {
+        justify-content: end;
+        align-items: start;
+    }
+    
+    &_center {
+        display: block;
+    }
+    
+    &_right-top {
+        align-items: end;
+    }
+    
+    &_right-bottom {
+        align-items: start;
+    }
+}
+
+
+
+
+

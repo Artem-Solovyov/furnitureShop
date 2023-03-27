@@ -95,3 +95,10 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+._flyImage._ibg {
+    opacity: 1;
+    position: fixed;
+    z-index: 100;
+    transition: all 0.8s ease 0s;
+}
