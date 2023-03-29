@@ -106,6 +106,7 @@
     }
 
     &__button {
+
         font-weight: 600;
         background-color: var(--orangeColor);
         @include adaptive-value('min-hight', 78, 45,1);

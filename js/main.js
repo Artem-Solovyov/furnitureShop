@@ -1,3 +1,6 @@
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load("particles-js", "../json/particles.json", function () {});
+
 // funcyion is mobile
 
 const isMobile = {
@@ -684,3 +687,13 @@ if (document.querySelector(".slider-tips__body")) {
     },
   });
 }
+
+const maxHeight = Math.max(
+  document.body.scrollHeight,
+  document.documentElement.scrollHeight,
+  document.body.offsetHeight,
+  document.documentElement.offsetHeight,
+  document.body.clientHeight,
+  document.documentElement.clientHeight
+);
+console.log(maxHeight);
