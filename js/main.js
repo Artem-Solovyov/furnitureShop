@@ -697,3 +697,39 @@ const maxHeight = Math.max(
   document.documentElement.clientHeight
 );
 console.log(maxHeight);
+
+//=================Появление элементов при скролле====================
+
+const animItems = document.querySelectorAll("._anim-item");
+
+if (animItems.length > 0) {
+  window.addEventListener("scroll", animOnScroll);
+  function animOnScroll(params) {
+    for (let index = 0; index < animItems.length; index++) {
+      const animItem = animItems[index];
+      const animItemHeigth = animItem.offsetHeight;
+      const animItemOffset = animItem.getBoundingClientRect().top + scrollY;
+      const animStart = 4;
+
+      let animItemPoint = window.innerHeight - animItemHeigth / animStart;
+
+      if (animItemHeigth > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+
+      if (
+        scrollY > animItemOffset - animItemPoint &&
+        scrollY < animItemOffset + animItemHeigth
+      ) {
+        animItem.classList.add("_active");
+      } else {
+        if (!animItem.classList.contains("_anim-no-hide"))
+          // не прятать после прокрутки
+          animItem.classList.remove("_active");
+      }
+    }
+  }
+  setTimeout(() => {
+    animOnScroll();
+  }, 400);
+}

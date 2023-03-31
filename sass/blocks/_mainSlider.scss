@@ -349,7 +349,14 @@
     &__item {
         display: grid;
         padding: 15px 0;
-        grid-template: auto auto / 85px 1fr ;
+        grid-template: auto auto / 85px 1fr;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+        &._active {
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
         @media (max-width: 992px) {
             min-width: 280px;
         }
@@ -797,10 +804,22 @@
 //======================TIPS=============================================================
 
 .tips {
+    &._active {
+        .tips__container{
+            opacity: 1;
+            transform: translate(0px, 0px);
+            }
+        }
+    
     @include adaptive-value('padding-top', 44, 30, 1);
     @include adaptive-value('padding-bottom', 44, 30, 1);
     
     &__container {
+        opacity: 0;
+        transform: translate(0px, 120%);
+        transition: all 1s ease 0s;
+    
+        
         padding-left: 15px;
         padding-right: 15px;
 
