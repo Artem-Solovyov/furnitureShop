@@ -727,6 +727,8 @@ legend {
 
 .footer {
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 .footer__body {
   display: grid;
@@ -864,7 +866,7 @@ legend {
 .subscribe__input {
   width: 100%;
   padding: 0 12px;
-  background-color: #F4F5F7;
+  background-color: #f4f5f7;
   color: #828282;
 }
 .subscribe__button {
@@ -1360,6 +1362,8 @@ legend {
   text-align: center;
 }
 .products__more {
+  position: relative;
+  z-index: 2;
   border: 1px solid var(--orangeColor);
   min-width: 245px;
 }

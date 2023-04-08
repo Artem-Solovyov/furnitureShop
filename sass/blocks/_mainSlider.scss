@@ -1,16 +1,20 @@
 .page {
     flex: 1 1 auto;
     &__main-slider {
-
     }
-    &__advantages {}
+    &__advantages {
+    }
 
-    &__products {}
+    &__products {
+    }
 
-    &__rooms {}
-    
-    &-tips {}
-        &__furniture {}
+    &__rooms {
+    }
+
+    &-tips {
+    }
+    &__furniture {
+    }
 }
 
 //=================MAIN=SLIDER===========================================================
@@ -20,7 +24,7 @@
         position: relative;
         @media (min-width: 992px) {
             &::before {
-                content: '';
+                content: "";
                 background: #f9f1e7;
                 position: absolute;
                 top: 0;
@@ -30,34 +34,33 @@
             }
         }
     }
-    
+
     &__body {
         overflow: visible;
         padding: 140px 15px 0 15px;
         position: relative;
-        
+
         z-index: 2;
         @media (max-width: 992px) {
             padding: 80px 15px 0 15px;
         }
         @media (max-width: 768px) {
-            padding: 50px 15px 0 15px ;
+            padding: 50px 15px 0 15px;
         }
         @media (min-width: 992px) {
             display: flex;
         }
-        
     }
-    
+
     &__conent {
         align-self: flex-start;
         flex: 0 0 494/1240 * 100%;
-        @include adaptive-value('margin-bottom', 80, 15, 1);
+        @include adaptive-value("margin-bottom", 80, 15, 1);
         @media (max-width: 992px) {
             margin: 0 -15px;
         }
     }
-    
+
     &__slider {
         flex: 1 1 auto;
         min-width: 0;
@@ -66,8 +69,9 @@
             padding: 0 0 0 32px;
         }
     }
-    
-    &__controls {}
+
+    &__controls {
+    }
 }
 
 .contant-main {
@@ -76,45 +80,44 @@
     padding-left: 15px;
     padding-right: 15px;
     background: rgba(255, 255, 255, 0.72);
-    @include adaptive-value('padding-top', 60, 15, 1);
-    @include adaptive-value('padding-bottom', 60, 15, 1);
+    @include adaptive-value("padding-top", 60, 15, 1);
+    @include adaptive-value("padding-bottom", 60, 15, 1);
     background: rgba(255, 255, 255, 0.9);
     @media (min-width: 992px) {
-        @include adaptive-value('padding', 60, 1, 1);
-        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))){
+        @include adaptive-value("padding", 60, 1, 1);
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
             background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blure(31px)
+            backdrop-filter: blure(31px);
         }
     }
     &__title {
         font-weight: 700;
-        @include adaptive-value('font-size', 52, 22, 1);
+        @include adaptive-value("font-size", 52, 22, 1);
         line-height: 120%;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin: 0 0 16px/52px * 1em 0;
         }
     }
 
     &__text {
-        @include adaptive-value('font-size', 20, 16, 1);
+        @include adaptive-value("font-size", 20, 16, 1);
         color: var(--greyColor);
         font-weight: 500;
-        line-height: 150%;  
+        line-height: 150%;
         &:not(:last-child) {
-                margin: 0 0 48px/20px * 1em 0;
-            }
+            margin: 0 0 48px/20px * 1em 0;
+        }
     }
 
     &__button {
-
         font-weight: 600;
         background-color: var(--orangeColor);
-        @include adaptive-value('min-hight', 78, 45,1);
-        @include adaptive-value('font-size', 20, 16,1);
+        @include adaptive-value("min-hight", 78, 45, 1);
+        @include adaptive-value("font-size", 20, 16, 1);
         color: #fff;
         width: 100%;
         @media (any-hover: hover) {
-            &:hover{
+            &:hover {
                 background: #966749;
             }
         }
@@ -134,7 +137,7 @@
         align-items: stretch;
         flex-direction: column-reverse;
     }
-    &__controls{
+    &__controls {
         align-self: stretch;
         margin: 0 0 20px 0;
         @media (max-width: 992px) {
@@ -144,38 +147,35 @@
     &__slide {
         position: relative;
     }
-    
+
     &__image {
         padding: 0 0 59.1% 0;
     }
-    
+
     &__body {
         overflow: visible;
-        
-        
+
         @media (min-width: 992px) {
-            @include adaptive-value('width', 934, 290, 1)
-            
+            @include adaptive-value("width", 934, 290, 1);
         }
         @media (max-width: 992px) {
             margin: 0 -15px;
         }
     }
-    
+
     &__title {
-        @include adaptive-value('font-size', 28, 22, 1);
+        @include adaptive-value("font-size", 28, 22, 1);
         font-weight: 600;
         line-height: 120%;
         margin-bottom: 4px;
-
     }
-    
+
     &__text {
         line-height: 150%;
         color: var(--greyColor);
         margin-bottom: 8px;
     }
-    
+
     &__price {
         display: flex;
         flex-direction: row-reverse;
@@ -183,7 +183,7 @@
         align-items: center;
         justify-content: space-between;
         font-weight: 600;
-        @include adaptive-value('font-size', 20, 16, 1);
+        @include adaptive-value("font-size", 20, 16, 1);
         &::before {
             margin: 0 0 0 10px;
             font-size: 12px;
@@ -197,19 +197,19 @@
         color: inherit;
         display: flex;
         flex-direction: column;
-        @include adaptive-value('padding', 24, 15, 1);
+        @include adaptive-value("padding", 24, 15, 1);
         background: rgba(255, 255, 255, 0.9);
         @media (min-width: 768px) {
             position: absolute;
             min-width: 350px;
-            @include adaptive-value('right', 40, 0, 1);
-            @include adaptive-value('bottom', 40, 0, 1);
+            @include adaptive-value("right", 40, 0, 1);
+            @include adaptive-value("bottom", 40, 0, 1);
         }
         @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
             background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blure(31px)
+            backdrop-filter: blure(31px);
         }
-}
+    }
 }
 
 .controls-slider-main {
@@ -228,20 +228,18 @@
     }
 
     &__arrows {
-        
     }
-    
 }
 
-// icon 
+// icon
 
 .slider-arrows {
     display: grid;
     grid-template-columns: repeat(2, 48px);
     column-gap: 8px;
     @media (max-width: 992px) {
-            display: none;
-        } 
+        display: none;
+    }
 }
 
 .slider-arrow {
@@ -269,47 +267,46 @@
         box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
         background-color: #fff;
         @media (any-hover: hover) {
-                &:hover {
-                    color: #fff;
-                    background-color:var(--orangeColor);
-                }
+            &:hover {
+                color: #fff;
+                background-color: var(--orangeColor);
             }
+        }
     }
 }
 
-//pagination 
+//pagination
 
 .swiper-pagination-bullets {
-    display: flex ;
+    display: flex;
     flex-wrap: wrap;
-    
 }
 
 .swiper-pagination-bullet {
     cursor: pointer;
     flex: 0 0 27px;
-    height: 27px ;
+    height: 27px;
     position: relative;
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 2px 0;
     opacity: 1;
     background: none;
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-right: 12px;
     }
     &::after {
-        content: '';
+        content: "";
         width: 11px;
-        height: 11px ;
+        height: 11px;
         background-color: #d8d8d8;
         border-radius: 50%;
         transition: background-color 0.3s ease;
     }
 
-    &::before{
-        content: '';
+    &::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -319,9 +316,7 @@
         border: 1px solid var(--orangeColor);
         transition: transform 0.3s ease;
         transform: scale(0);
-
     }
-
 }
 .swiper-pagination-bullet-active {
     background: none;
@@ -336,16 +331,16 @@
 //=================ADVANTAGES===========================================================
 
 .advantages {
-    @include adaptive-value('padding-top', 88, 30,1);
-    @include adaptive-value('padding-bottom', 88, 30,1);
+    @include adaptive-value("padding-top", 88, 30, 1);
+    @include adaptive-value("padding-bottom", 88, 30, 1);
     &__container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-left: 15px ;
-        padding-right: 15px ;
+        padding-left: 15px;
+        padding-right: 15px;
     }
-    
+
     &__item {
         display: grid;
         padding: 15px 0;
@@ -364,23 +359,23 @@
             grid-template: auto auto / auto 1fr;
         }
     }
-    
+
     &__icon {
         text-align: center;
         align-self: center;
         grid-row: span 2;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             padding: 0 15px 0 0;
         }
     }
-    
+
     &__title {
         font-weight: 600;
         font-size: 18px;
         line-height: 150%;
         margin: 0 0 2px/18px * 1em 0;
     }
-    
+
     &__text {
         line-height: 150%;
         color: var(--greyColor);
@@ -390,28 +385,32 @@
 //=================MAiN=BLOCK===========================================================
 
 .products {
-    @include adaptive-value('padding-bottom', 44, 30, 1);
-    &__container {}
-    
+    @include adaptive-value("padding-bottom", 44, 30, 1);
+    &__container {
+    }
+
     &__title {
         margin: 0 0 32px/40px * 1em 0;
     }
-    
+
     &__items {
         display: grid;
         gap: 32px;
-        grid-template-columns: repeat(auto-fit,minmax(285px, 1fr))
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
     }
-    
-    &__item {}
+
+    &__item {
+    }
     &__footer {
-        padding: 32px 0 0 0; 
-        text-align: center
+        padding: 32px 0 0 0;
+        text-align: center;
     }
     &__more {
+        position: relative;
+        z-index: 2;
         border: 1px solid var(--orangeColor);
         min-width: 245px;
-        &._hold{
+        &._hold {
             opacity: 0.2;
             cursor: default;
         }
@@ -419,7 +418,7 @@
 }
 
 ._title {
-    @include adaptive-value('font-size', 40, 24, 1);
+    @include adaptive-value("font-size", 40, 24, 1);
     font-weight: 700;
     line-height: 120%;
     text-align: center;
@@ -431,7 +430,7 @@
     flex-direction: column;
     position: relative;
 
-    @media (any-hover: hover){
+    @media (any-hover: hover) {
         &:hover {
             .item-product__actions {
                 opacity: 1;
@@ -445,10 +444,10 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
-        @include adaptive-value('right', 24, 10,1);
-        @include adaptive-value('top', 24, 10,1);
+        @include adaptive-value("right", 24, 10, 1);
+        @include adaptive-value("top", 24, 10, 1);
     }
-    
+
     &__lebel {
         flex: 0 0 48px;
         width: 48px;
@@ -458,66 +457,63 @@
         justify-content: center;
         color: #fff;
         font-weight: 500;
-        &:not(:last-child){
-            margin: 0 0 10px 0; 
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
         }
-        &_sale  {
+        &_sale {
             background: #e97171;
         }
-        &_new  {
+        &_new {
             background: #2ec1ac;
         }
-
     }
-    
-    
+
     &__image {
         padding: 0 0 301px/285px * 100% 0;
     }
-    
+
     &__body {
         flex: 1 1 auto;
         padding: 16px 16px 30px 16px;
         display: flex;
         flex-direction: column;
     }
-    
+
     &__contant {
         flex: 1 1 auto;
     }
-    
+
     &__title {
-        @include adaptive-value('font-size', 24, 20, 1);
+        @include adaptive-value("font-size", 24, 20, 1);
         font-weight: 600;
         line-height: 120%;
         margin: 0 0 8px/24px * 1em 0;
     }
-    
+
     &__text {
         color: var(--greyColor);
         line-height: 150%;
         margin: 0 0 8px/24px * 1em 0;
     }
-    
+
     &__prices {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         line-height: 150%;
     }
-    
+
     &__price {
-        @include adaptive-value('font-size', 20, 16, 1);
+        @include adaptive-value("font-size", 20, 16, 1);
         font-weight: 600;
         &_old {
-            @include adaptive-value('font-size', 16, 14, 1);
+            @include adaptive-value("font-size", 16, 14, 1);
             font-weight: normal;
             margin: 0 0 0 16px;
             color: #b0b0b0;
             text-decoration: line-through;
         }
     }
-    
 
     &__actions {
         @media (any-hover: none) {
@@ -538,22 +534,20 @@
             transition: all 0.3s ease;
             background-color: rgba(58, 58, 58, 0.74);
             z-index: 3;
-        
         }
     }
 }
 
 .actions-product {
-
     &__body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    
+
     &__button {
         flex: 1 1 100%;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin: 0 0 24px 0;
         }
         &._hold {
@@ -561,7 +555,7 @@
             cursor: default;
         }
     }
-    
+
     &__link {
         display: flex;
         align-items: center;
@@ -574,80 +568,77 @@
         }
         @media (any-hover: hover) {
             color: #fff;
-            &:hover{
-                color: var(--orangeColor)
+            &:hover {
+                color: var(--orangeColor);
             }
         }
-
     }
 }
 
 //================ROOMS====================================================================
 
-
 .rooms {
     // margin-left: 15px;
     // margin-right: 15px;
     background: #fcf8f3;
-    @include adaptive-value('padding-top', 44, 30, 1);
-    @include adaptive-value('padding-bottom', 44, 30, 1);
+    @include adaptive-value("padding-top", 44, 30, 1);
+    @include adaptive-value("padding-bottom", 44, 30, 1);
 
     &__container {
         padding-left: 15px;
         padding-right: 15px;
-        @media (min-width: 992px){
+        @media (min-width: 992px) {
             display: flex;
         }
     }
-    
+
     &__body {
         flex: 0 0 465 / 1240 * 100%;
         position: relative;
         z-index: 5;
         align-self: center;
         @media (min-width: 992px) {
-                @include adaptive-value('padding-right', 80, 30, 1);
-            }
-        @media (max-width: 992px){
+            @include adaptive-value("padding-right", 80, 30, 1);
+        }
+        @media (max-width: 992px) {
             margin: 0 0 30px 0;
         }
     }
-    
+
     &__title {
         &:not(:last-child) {
-            margin: 0 0 8px/40px *1em 0;
+            margin: 0 0 8px/40px * 1em 0;
         }
         text-align: left;
     }
-    
+
     &__text {
         line-height: 150%;
         font-weight: 500;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin: 0 0 24px 0;
         }
     }
-    
+
     &__button {
         background: var(--orangeColor);
         color: #fff;
         min-width: 180px;
-        @media (any-hover: hover){
+        @media (any-hover: hover) {
             &:hover {
                 background: #8d6146;
             }
         }
     }
-    
+
     &__slider {
         flex: 1 1 auto;
         min-width: 0;
         align-self: flex-start;
         @media (max-width: 480px) {
-                margin: 0 -15px;
-            }
+            margin: 0 -15px;
+        }
     }
-
 }
 
 .slider-rooms {
@@ -656,8 +647,8 @@
         width: 372px;
         overflow: visible;
         position: relative;
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             position: absolute;
             top: 0;
             height: 100%;
@@ -665,23 +656,24 @@
             left: 0;
             background: #fcf8f3;
             z-index: 2;
-            transform: translate(-100%,0);
+            transform: translate(-100%, 0);
         }
         @media (max-width: 480px) {
             width: 100%;
         }
     }
-    
-    &__wrapper {}
-    
+
+    &__wrapper {
+    }
+
     &__slide {
         width: 372px;
         position: relative;
         overflow: hidden;
-        @include adaptive-value('min-height', 585, 400, 1);
+        @include adaptive-value("min-height", 585, 400, 1);
         &.swiper-slide-active {
-            .slider-rooms__image{
-                @include adaptive-value('min-height', 585, 400, 1)
+            .slider-rooms__image {
+                @include adaptive-value("min-height", 585, 400, 1);
             }
         }
         @media (max-width: 480px) {
@@ -689,33 +681,33 @@
         }
     }
 
-    &__image{
+    &__image {
         transition: min-height 0.8s ease;
-        @include adaptive-value('min-height', 585, 400, 1);
-    
-        @media (min-width: 768px){
-            @include adaptive-value('min-height', 500, 400, 1);
+        @include adaptive-value("min-height", 585, 400, 1);
+
+        @media (min-width: 768px) {
+            @include adaptive-value("min-height", 500, 400, 1);
         }
     }
-    
+
     &__content {
         position: absolute;
         color: inherit;
         max-width: 240px;
-        @include adaptive-value('left', 24, 15, 1);
-        @include adaptive-value('bottom', 24, 15, 1);
-        @include adaptive-value('padding', 32, 15, 1);
+        @include adaptive-value("left", 24, 15, 1);
+        @include adaptive-value("bottom", 24, 15, 1);
+        @include adaptive-value("padding", 32, 15, 1);
         background: rgba(255, 255, 255, 0.72);
         @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
             background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blure(31px)
+            backdrop-filter: blure(31px);
         }
 
         &::before {
             position: absolute;
             bottom: 0;
             right: 0;
-            transform: translate(100%,0);
+            transform: translate(100%, 0);
             width: 48px;
             height: 48px;
             background-color: var(--orangeColor);
@@ -724,18 +716,16 @@
             align-items: center;
             justify-content: center;
         }
+    }
 
-    }
-    
     &__label {
-        
     }
-    
+
     &__title {
         font-weight: 600;
-        @include adaptive-value('font-size', 28, 24, 1)
+        @include adaptive-value("font-size", 28, 24, 1);
     }
-    
+
     &__arrows {
         pointer-events: none;
         position: absolute;
@@ -746,26 +736,24 @@
         z-index: 5;
         justify-content: space-between;
 
-        @media (min-width: 1300px){
+        @media (min-width: 1300px) {
             width: calc(100% + 48px);
             left: -24px;
         }
-        @media (max-width: 992px){
+        @media (max-width: 992px) {
             display: grid;
         }
     }
-    
+
     &__dotts {
-    
-        @media (min-width: 768px){
+        @media (min-width: 768px) {
             position: absolute;
-            bottom: 10px !important; 
+            bottom: 10px !important;
             width: 100%;
             left: 396px !important;
             z-index: 5;
-            
         }
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             justify-content: center;
             padding: 15px 0 0 0;
         }
@@ -779,23 +767,27 @@
     justify-content: start;
     color: var(--darkGreyColor);
     grid-template-columns: auto 27px auto;
-    &:not(:last-child){
-        margin: 0 0 8px 0
+    &:not(:last-child) {
+        margin: 0 0 8px 0;
     }
 
-    &__number {}
-    
+    &__number {
+    }
+
     &__line {
         height: 1px;
-        background-color:var(--darkGreyColor);
+        background-color: var(--darkGreyColor);
     }
-    
-    &__text {}
+
+    &__text {
+    }
 }
 
-.icon-arrow-link {}
+.icon-arrow-link {
+}
 
-.slider-arrows {}
+.slider-arrows {
+}
 
 .slider-arrow {
     pointer-events: auto;
@@ -805,59 +797,58 @@
 
 .tips {
     &._active {
-        .tips__container{
+        .tips__container {
             opacity: 1;
             transform: translate(0px, 0px);
-            }
         }
-    
-    @include adaptive-value('padding-top', 44, 30, 1);
-    @include adaptive-value('padding-bottom', 44, 30, 1);
-    
+    }
+
+    @include adaptive-value("padding-top", 44, 30, 1);
+    @include adaptive-value("padding-bottom", 44, 30, 1);
+
     &__container {
         opacity: 0;
         transform: translate(0px, 120%);
         transition: all 1s ease 0s;
-    
-        
+
         padding-left: 15px;
         padding-right: 15px;
-
     }
-    
+
     &__title {
     }
-    
-    &__slider {}
+
+    &__slider {
+    }
 }
 
 .slider-tips {
     position: relative;
     &__body {
         min-width: 0;
-        @include adaptive-value ('marin-left', -32, -15, 1);
-        @include adaptive-value ('marin-riht', -32, -15, 1);
-        @include adaptive-value ('padding', 32, 15, 1);
+        @include adaptive-value("marin-left", -32, -15, 1);
+        @include adaptive-value("marin-riht", -32, -15, 1);
+        @include adaptive-value("padding", 32, 15, 1);
     }
-    
+
     &__wrapper {
     }
-    
+
     &__slide {
         display: flex;
         flex-direction: column;
         transition: box-shadow 0.3s ease;
-        @media (any-hover: hover){
-            &:hover{
-                box-shadow: 0 0 32px rgba(97,97,97, 02);
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0 0 32px rgba(97, 97, 97, 02);
             }
         }
     }
-    
+
     &__image {
-        padding: 0 0 251/391 *100% 0px
+        padding: 0 0 251/391 * 100% 0px;
     }
-    
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -865,35 +856,35 @@
         flex: 1 1 auto;
         align-items: flex-start;
     }
-    
+
     &__title {
         flex: 1 1 auto;
         color: inherit;
         font-weight: 600;
         line-height: 120%;
-        @include adaptive-value('font-size', 24, 18, 1);
+        @include adaptive-value("font-size", 24, 18, 1);
         transition: color 0.3s ease;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin: 0 0 8px/24px * 1em 0;
         }
-        @media (any-hover: hover){
-            &:hover{
-                color: var(--orangeColor)
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--orangeColor);
             }
         }
     }
-    
+
     &__text {
         color: var(--greyColor);
         font-size: 14px;
         line-height: 150%;
     }
-    
+
     &__dotts {
-        @include adaptive-value('padding-top', 8, 0, 1);
+        @include adaptive-value("padding-top", 8, 0, 1);
         justify-content: center;
     }
-    
+
     &-arrows {
         display: none;
         pointer-events: none;
@@ -904,12 +895,12 @@
         // left: -24px;
         z-index: 5;
         justify-content: space-between;
-    
+
         @media (min-width: 1300px) {
             width: calc(100%);
             // left: -24px;
         }
-    
+
         @media (min-width: 450px) {
             display: grid;
         }
@@ -921,111 +912,103 @@
 
 //===================FUrNITURE============================================================
 
-
-
 .furniture {
-    @include adaptive-value('padding-bottom', 85, 40, 1);
+    @include adaptive-value("padding-bottom", 85, 40, 1);
 
-    &__container {}
-    
+    &__container {
+    }
+
     &__label {
         text-align: center;
         color: var(--darkGreyColor);
         line-height: 150%;
-        @include adaptive-value('font-size', 20, 16, 1);
-        &:no(:last-child){
+        @include adaptive-value("font-size", 20, 16, 1);
+        &:no(:last-child) {
             margin: 0 0 8px/20px * 1em 0;
         }
     }
-    
+
     &__title {
         margin: 0 0 32px/40px * 1em 0;
     }
-    
+
     &__body {
         position: relative;
-        @media (any-hover: none){
+        @media (any-hover: none) {
             overflow: auto;
             -webkit-overflow-scrolling: touch;
         }
     }
-    
+
     &__items {
         display: grid;
         grid-template-columns: auto;
         grid-auto-flow: column;
         align-items: center;
         gap: 16px;
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 justify-content: center;
             }
         }
     }
-    
+
     &__column {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         margin: 0px -8px;
-        &:first-child{
+        &:first-child {
             justify-content: flex-end;
         }
     }
-    
+
     &__row {
         display: inline-grid;
         padding: 0 8px;
         gap: 16px;
         grid-template-columns: auto;
         grid-auto-flow: column;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin: 0 0 16px 0;
         }
     }
 }
 
-
 .row-furniture {
-
     &_left-top {
         justify-content: end;
         align-items: end;
     }
-    
+
     &__item {
-        @media (any-hover:hover){
+        @media (any-hover: hover) {
             img {
                 transition: all 0.6s ease;
                 filter: grayscale(1);
             }
-            &:hover{
+            &:hover {
                 img {
                     filter: grayscale(0);
                 }
-        }
+            }
         }
     }
-    
+
     &_left-bottom {
         justify-content: end;
         align-items: start;
     }
-    
+
     &_center {
         display: block;
     }
-    
+
     &_right-top {
         align-items: end;
     }
-    
+
     &_right-bottom {
         align-items: start;
     }
 }
-
-
-
-
-
