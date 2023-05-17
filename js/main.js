@@ -1,5 +1,5 @@
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", "../json/particles.json", function () {});
+// particlesJS.load("particles-js", "../json/particles.json", function () {});
 
 // funcyion is mobile
 
